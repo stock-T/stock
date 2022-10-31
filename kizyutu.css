@@ -47,8 +47,8 @@ h1{
     font-size: 50px;
     border-radius: 10px;
     border-color: rgb(52, 110, 91);
-    border: solid 3px;
     background-color: rgba(104, 104, 104, 0.027);
+    border: double 5px;
 }
 #result{
     font-family: 'Noto Sans JP', sans-serif;
