@@ -182,9 +182,10 @@ p{
     left: 0;/*メニューを画面内へ*/
 }
 
+
 @media screen and (min-width: 1080px) {
-table{
- text-align: center;
-font-size: 23.5px;
-}
-}
+  table{
+   text-align: center;
+  font-size: 23.5px;
+  }
+  }
