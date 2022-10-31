@@ -176,7 +176,7 @@ p{
     top: 0;
     left: 100%;
     z-index: 80;
-    background-color: #cc74ff;
+    background-color: #9274ff;
     transition: all 0.5s;
 }
 #menu-btn-check:checked ~ .menu-content {
