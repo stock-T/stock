@@ -1,27 +1,13 @@
 @media screen and (max-width: 450px) {
 	/* 450px以下に適用されるCSS */
-    body{
-        text-align: center;
-    }
     h1{
     font-size: 35px;
-    color: rgb(51, 207, 247);
-    -webkit-text-stroke: 1.5px rgb(0, 0, 0);
-    font-family: 'Mochiy Pop One', sans-serif;
-    text-align: center;
-    margin-bottom: -10px;
     }
-    hr{
-        margin-bottom: -10px;
-    }
+    
     h2{
-        font-family: 'Noto Sans JP', sans-serif;
-        margin-bottom: -2px;
         font-size: 27px;
     }
     a{
-        font-family: 'Noto Sans JP', sans-serif;
-        color: blue;
         font-size: 23px;
 
     }
@@ -32,28 +18,14 @@
 
 }
 @media screen and (min-width: 450px) {
-    body{
-        text-align: center;
-    }
     h1{
     font-size: 45px;
-    color: rgb(51, 207, 247);
-    -webkit-text-stroke: 1.5px rgb(0, 0, 0);
-    font-family: 'Mochiy Pop One', sans-serif;
-    text-align: center;
-    margin-bottom: -10px;
     }
-    hr{
-        margin-bottom: -10px;
-    }
+    
     h2{
-        font-family: 'Noto Sans JP', sans-serif;
-        margin-bottom: -2px;
         font-size: 30px;;
     }
     a{
-        font-family: 'Noto Sans JP', sans-serif;
-        color: blue;
         font-size: 26px;
 
     }
@@ -61,56 +33,28 @@
 
 }
 @media screen and (min-width: 550px) {
-    body{
-        text-align: center;
-    }
     h1{
     font-size: 55px;
-    color: rgb(51, 207, 247);
-    -webkit-text-stroke: 1.5px rgb(0, 0, 0);
-    font-family: 'Mochiy Pop One', sans-serif;
-    text-align: center;
-    margin-bottom: -10px;
     }
-    hr{
-        margin-bottom: -10px;
-    }
+    
     h2{
-        font-family: 'Noto Sans JP', sans-serif;
-        margin-bottom: -2px;
         font-size: 30px;
     }
     a{
-        font-family: 'Noto Sans JP', sans-serif;
-        color: blue;
         font-size: 30px;
 
     }
 
 }
 @media screen and (min-width: 800px) {
-    body{
-        text-align: center;
-    }
     h1{
     font-size: 62px;
-    color: rgb(51, 207, 247);
-    -webkit-text-stroke: 1.5px rgb(0, 0, 0);
-    font-family: 'Mochiy Pop One', sans-serif;
-    text-align: center;
-    margin-bottom: -10px;
     }
-    hr{
-        margin-bottom: -10px;
-    }
+    
     h2{
-        font-family: 'Noto Sans JP', sans-serif;
-        margin-bottom: -2px;
         font-size: 43px;
     }
     a{
-        font-family: 'Noto Sans JP', sans-serif;
-        color: blue;
         font-size: 34px;
 
     }
@@ -118,28 +62,14 @@
 }
 
 @media screen and (min-width: 1000px) {
-    body{
-        text-align: center;
-    }
     h1{
     font-size: 70px;
-    color: rgb(51, 207, 247);
-    -webkit-text-stroke: 1.5px rgb(0, 0, 0);
-    font-family: 'Mochiy Pop One', sans-serif;
-    text-align: center;
-    margin-bottom: -10px;
     }
-    hr{
-        margin-bottom: -10px;
-    }
+    
     h2{
-        font-family: 'Noto Sans JP', sans-serif;
-        margin-bottom: -2px;
         font-size: 45px;
     }
     a{
-        font-family: 'Noto Sans JP', sans-serif;
-        color: blue;
         font-size: 33px;
     }
      
