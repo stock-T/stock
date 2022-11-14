@@ -1,1 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>STOCKテスト</title>
+<link rel="stylesheet" href="kizyutu.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=swap" rel="stylesheet">
+</head>
+<div class="hamburger-menu">
+    <input type="checkbox" id="menu-btn-check">
+    <label for="menu-btn-check" class="menu-btn"><span></span></label>
+    <div class="menu-content">
+        <ul>
+            <li>
+                <a href="index.html">ホームへ</a>
+            </li>
+            <li>
+                <a href="index.html">ホームへ</a>
+            </li>
+            <li>
+                <a href="index.html">ホームへ</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<body>
+<div id="container">
+    <h1>STOCKテスト</h1>
+    <p id="number">No,653~682</p>
+	<p id="ja"></p>
+	<input type="text" id="entry">
+	<button id="btn">答える</button>
+    <p id="kaitou">＜解答＞</p>
+	<p id="result"></p>
+</div>
+</body>
+</html>
+<script>
+'use strict';
+window.onload=()=>{
+	const words=[
+    ['伝記 b','bio'],
+    ['書類 d','document'],
+    ['比喩 m','metaphor'],
+    ['批評 r','review'],
+    ['言及する r','refer'],
+    ['手書き/脚本 s','script'],
+    ['監督 d','director'],
+    ['役割 r','role'],
+    ['放送する b','broadcast'],
+    ['場所 s','site'],
+    ['国境/最先端 f','frontier'],
+    ['分割 d','devision'],
+    ['大陸 c','conrinet'],
+    ['広い b','broad'],
+    ['天井 c','ceiling'],
+    ['空っぽの e','empty'],
+    ['消化する d','digest'],
+    ['磨く b','brush'],
+    ['沈む/流し s','sink'],
+    ['アルコール a','alcohol'],
+    ['苦い b','bitter'],
+    ['家庭の/国内の d','domestic'],
+    ['暴力 v','violence'],
+    ['暴力的な v','violent'],
+    ['離婚 d','divorce'],
+    ['似ている s','similar',],
+    ['名字 s','surname'],
+    ['育児 c','childcare'],
+    ['相対的な r','relative'],
+    ['輸送する t','transport'],
 
+	];
+	const ja =document.getElementById('ja');
+	const entry=document.getElementById('entry');
+	const btn=document.getElementById('btn');
+	const result=document.getElementById('result');
+	let index=0;
+	let correct=0;
+	btn.addEventListener('click',()=>{
+		let ans=entry.value.toLowerCase();
+		let msg='';
+		if (ans == words[index][1]){
+			correct++;
+			msg='〇';
+		}else{
+			msg=`×　${words[index][0]}＝${words[index][1]}`;
+		}
+		if(index==words.length-1){
+			msg+=`<br>全${words.length}問中,${correct}問正解`;
+			index=-1;
+		}
+		result.innerHTML=msg;
+		result.classList.remove('fade');
+		setTimeout(function(){
+			result.classList.add('fade');
+		},1500);
+		setItem(++index);
+		entry.focus();
+	});
+	function setItem(index){
+		entry.value='';
+		ja.textContent=words[index][0];
+	}
+	setItem(index);
+}
+</script>
