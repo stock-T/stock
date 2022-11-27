@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>STOCKテスト</title>
+<link rel="stylesheet" href="kizyutu.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=swap" rel="stylesheet">
+</head>
+<div class="hamburger-menu">
+    <input type="checkbox" id="menu-btn-check">
+    <label for="menu-btn-check" class="menu-btn"><span></span></label>
+    <div class="menu-content">
+        <ul>
+            <li>
+                <a href="index.html">ホームへ</a>
+            </li>
+            <li>
+                <a href="index.html">ホームへ</a>
+            </li>
+            <li>
+                <a href="index.html">ホームへ</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<body>
+<div id="container">
+    <h1>STOCKテスト</h1>
+    <p id="number">記述全集</p>
+	<p id="ja"></p>
+	<input type="text" id="entry">
+	<button id="btn">答える</button>
+    <p id="kaitou">＜解答＞</p>
+	<p id="result"></p>
+</div>
+</body>
+</html>
+<script>
+'use strict';
+window.onload=()=>{
+	const words=[
+		['反応する r...t','react'],
+    ['反応 r','response'],
+    ['反応する r.....d','respond'],
+    ['反映する r','reflect'],
+    ['地域社会 c','community'],
+    ['個人の i','individual'],
+    ['振る舞う b','behave'],
+    ['気づく n','notice'],
+    ['笑う l','laugh'],
+    ['笑い l','laughter'],
+    ['ユーモア h','humor'],
+    ['冗談を言う j','joking'],
+    ['建築する c','construct'],
+    ['真っ直ぐな s','straight'],
+    ['手伝う a','assist'],
+    ['尊敬する r','respect'],
+    ['口論する q','quarrel'],
+    ['無視する i','ignore'],
+    ['創造する c','create'],
+    ['創造的な c','creative'],
+    ['精神の s','spiritual'],
+    ['精神 s','spirit'],
+    ['突然のひらめき i','inspiration'],
+    ['やる気にさせる i','inspire'],
+    ['芸術家 a','artist'],
+    ['社会 s','society'],
+    ['社会的な s','social'],
+    ['社会学者 s','sociologist'],
+    ['自殺 s','suicide'],
+    ['ストレス s','stress'],['不足　l','luck'],
+		['分離する s','separate'],
+		['分割する d','divide',],
+		['緊急の u','urgent'],
+		['貢献する c','contribute'],
+		['出産 b','birth'],
+		['人口 p','population'],
+		['層 g','generation'],
+        ['青春時代 y','youth'],
+        ['隣人 n','neighbor'],
+        ['近所 n','neighborhood'],
+		['出生率 b','birthrate'],
+		['障害 d','disorder'],
+        ['看病する n','nurse'],
+        ['老人ホーム n　h','nursing home'],
+        ['保育園 n','nursery'],
+        ['教育する e','educate'],
+        ['獲得する a','acquire'],
+        ['獲得 a','acquisition'],
+        ['学習過程 l　p','learning process'],
+        ['解く s','solve'],
+        ['問題解決能力 p　s','problem-solving skills'],
+        ['解決策 s','solution'],
+        ['活発な a','active'],
+        ['攻撃的な a','aggressive'],
+        ['能力 c','capacity'],
+        ['性格 p','personality'],
+        ['からかう t','tease'],
+        [' いじめっこ b','bully'],
+        ['好奇心の強い c','curious'],['乳児　i','infant'],
+		['初歩の e','elementary'],
+		['就学前の/幼稚園 p','preschool',],
+		['改革する r','reform'],
+		['成熟した m','mature'],
+		['知恵 w','wisdom'],
+		['賢い s','smart'],
+		['明るい/頭がいい b','bright'],
+        ['法　l','law'],
+        ['弁護士 l','lawyer'],
+        ['法律の l','legal'],
+		['判断する j','judge'],
+		['無罪の i','innocent'],
+        ['ルール r','rule'],
+        ['原則 p','principle'],
+        ['労働 l','labor'],
+        ['手の/肉体の m','manual'],
+        ['製造する m','manufacture'],
+        ['業界/産業 i','industry'],
+        ['運ぶ c','convey'],
+        ['(有料で)借りる/雇う h','hire'],
+        ['雇う e','employ'],
+        ['雇用者 e','employer'],
+        ['従業員 e','employee'],
+        ['土台 f','foundation'],
+        ['設立する f','found'],
+        ['設立する e','establish'],
+        ['営業/手術 o','operation'],
+        ['操作する o','operate'],
+        ['組織する o','organize'],['コンサルタント c','consultant'],
+['義務 d','duty'],
+['引退するr','retire'],
+['地位 s','status'],
+['危険 r','risk'],
+['時間を守る p','punctual'],
+['拡大する e','expand'],
+['拡張 e','extension'],
+['延長する e','extend'],
+['余分の e','extra'],
+['要素 e','element'],
+['本部 h','headquarters'],
+['枝/支店 b','branch'],
+['パートタイムの p','part-time'],
+['フルタイムの f','full-time'],
+['同僚 c','coworker'],
+['秘書 s','secretary'],
+['仕事 t','task'],
+['技術 s','skill'],
+['優先 p','priority'],
+['会議 c','conference'],
+['評価する e','evaluate'],
+['意見 f','feedback'],
+['予定する s','schedule'],
+['世界/世間 w','world'],
+['文学 l','literature'],
+['図書館/書斎 l','library'],
+['百科事典 e','encyclopedia'],
+['伝記b','biography'],  ['伝記 b','bio'],
+    ['書類 d','document'],
+    ['比喩 m','metaphor'],
+    ['批評 r','review'],
+    ['言及する r','refer'],
+    ['手書き/脚本 s','script'],
+    ['監督 d','director'],
+    ['役割 r','role'],
+    ['放送する b','broadcast'],
+    ['場所 s','site'],
+    ['国境/最先端 f','frontier'],
+    ['分割 d','division'],
+    ['大陸 c','continent'],
+    ['広い b','broad'],
+    ['天井 c','ceiling'],
+    ['空っぽの e','empty'],
+    ['消化する d','digest'],
+    ['磨く b','brush'],
+    ['沈む/流し s','sink'],
+    ['アルコール a','alcohol'],
+    ['苦い b','bitter'],
+    ['家庭の/国内の d','domestic'],
+    ['暴力 v','violence'],
+    ['暴力的な v','violent'],
+    ['離婚 d','divorce'],
+    ['似ている s','similar',],
+    ['名字 s','surname'],
+    ['育児 c','childcare'],
+    ['相対的な r','relative'],
+    ['輸送する t','transport'],    ['車 v','vehicle'],
+    ['地下鉄 s','subway'],
+    ['免許 l','licence'],
+    ['遅らせる d','delay'],
+    ['発表する a','announce'],
+    ['源 s','source'],
+    ['真実 t','truth'],
+    ['偽の f','fake'],
+    ['科学的な s','scientific'],
+    ['実験 e','experiment'],
+    ['材料、原料 m','material'],
+    ['物質 s','substance'],
+    ['液体 l','liquid'],
+    ['燃やす b','burn'],
+    ['茹でる/沸騰する b','boil'],
+    ['凍る/凍らせる f','freeze'],
+    ['環境 e','environment'],
+    ['保護する p','protect'],
+    ['保護 p','protection'],
+    ['汚染 p','pollution'],
+    ['植物/工場/植える p','plant'],
+    ['つまむ、摘み取る p','pick'],
+    ['地球規模の g','global'],
+    ['地球 g','globe'],
+    ['酸素 o','oxygen'],
+    ['二酸化炭素 c d','carbon dioxide'],
+    ['吸収する a','absorb'],
+    ['極 p','pole'],
+    ['集める c','collect'],
+    ['ごみ g','garbage'],
+	
+	];
+	const ja =document.getElementById('ja');
+	const entry=document.getElementById('entry');
+	const btn=document.getElementById('btn');
+	const result=document.getElementById('result');
+	let index=0;
+	let correct=0;
+	btn.addEventListener('click',()=>{
+		let ans=entry.value.toLowerCase();
+		let msg='';
+		if (ans == words[index][1]){
+			correct++;
+			msg='〇';
+		}else{
+			msg=`×　${words[index][0]}＝${words[index][1]}`;
+		}
+		if(index==words.length-1){
+			msg+=`<br>全${words.length}問中,${correct}問正解`;
+			index=-1;
+		}
+		result.innerHTML=msg;
+		result.classList.remove('fade');
+		setTimeout(function(){
+			result.classList.add('fade');
+		},1500);
+		setItem(++index);
+		entry.focus();
+	});
+	function setItem(index){
+		entry.value='';
+		ja.textContent=words[index][0];
+	}
+	setItem(index);
+}
+</script>
