@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>STOCKテスト</title>
+<link rel="stylesheet" href="kizyutu.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=swap" rel="stylesheet">
+</head>
+<div class="hamburger-menu">
+    <input type="checkbox" id="menu-btn-check">
+    <label for="menu-btn-check" class="menu-btn"><span></span></label>
+    <div class="menu-content">
+        <ul>
+            <li>
+                <a href="index.html">ホームへ</a>
+            </li>
+            <li>
+                <a href="index.html">ホームへ</a>
+            </li>
+            <li>
+                <a href="index.html">ホームへ</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<body>
+<div id="container">
+    <h1>STOCKテスト</h1>
+    <p id="number">No,713~742</p>
+	<p id="ja"></p>
+	<input type="text" id="entry">
+	<button id="btn">答える</button>
+    <p id="kaitou">＜解答＞</p>
+	<p id="result"></p>
+</div>
+</body>
+</html>
+<script>
+'use strict';
+window.onload=()=>{
+	const words=[
+    ['ごみ　t','trash'],
+    ['浪費　w','waste'],
+    ['無駄の多い　w','wasteful'],
+    ['エネルギー e','energy'],
+    ['資源 r','resource'],
+    ['燃料 f','fuel'],
+    ['化石 f','fossil'],
+    ['不足 s','shortage'],
+    ['太陽の s','solar'],
+    ['放射能 r','radiation'],
+    ['生態 e','ecology'],
+    ['環境に優しい e','eco-friendly'],
+    ['減らす r','reduce'],
+    ['再利用する r','reuse'],
+    ['再利用する r','recycle'],
+    ['現象 p','phenomenon'],
+    ['場面 s','scene'],
+    ['輝く s','shine'],
+    ['災害 d','disaster'],
+    ['台風 t','tyhpoon'],
+    ['地震 e','earthquake'],
+    ['耕す c','cultivate'],
+    ['温度 t','temperature'],
+    ['気候 c','climate'],
+    ['穏やかな m','mild'],
+    ['熱帯の t','tropical'],
+    ['酸性雨 a r','acid rain'],
+    ['宇宙 u','universe'],
+    ['雰囲気 a','atmosphere'],
+    ['探索する e','explore'],
+
+
+	];
+	const ja =document.getElementById('ja');
+	const entry=document.getElementById('entry');
+	const btn=document.getElementById('btn');
+	const result=document.getElementById('result');
+	let index=0;
+	let correct=0;
+	btn.addEventListener('click',()=>{
+		let ans=entry.value.toLowerCase();
+		let msg='';
+		if (ans == words[index][1]){
+			correct++;
+			msg='〇';
+		}else{
+			msg=`×　${words[index][0]}＝${words[index][1]}`;
+		}
+		if(index==words.length-1){
+			msg+=`<br>全${words.length}問中,${correct}問正解`;
+			index=-1;
+		}
+		result.innerHTML=msg;
+		result.classList.remove('fade');
+		setTimeout(function(){
+			result.classList.add('fade');
+		},1500);
+		setItem(++index);
+		entry.focus();
+	});
+	function setItem(index){
+		entry.value='';
+		ja.textContent=words[index][0];
+	}
+	setItem(index);
+}
+</script>
