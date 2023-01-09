@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+ <html lang="ja">
+ <head>
+ <meta charset="utf-8">
+ <link rel="stylesheet" href="style.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=swap" rel="stylesheet">
+<title>STOCKテスト</title>
+ </head>
+ 
+  <div class="hamburger-menu">
+      <input type="checkbox" id="menu-btn-check">
+      <label for="menu-btn-check" class="menu-btn"><span></span></label>
+      <div class="menu-content">
+          <ul>
+              <li>
+                  <a href="index.html">ホームへ</a>
+              </li>
+              <li>
+                  <a href="index.html">ホームへ</a>
+              </li>
+              <li>
+                  <a href="index.html">ホームへ</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+ <body>
+ <h1>STOCKテスト</h1>
+<p>No,683~712</p>
+ <span id="001"></span>
+ <div id="text_q"></div>
+ <div id="text_s"></div>
+ <h2>＜解答＞</h2>
+ <div id="text_a"></div>
+ <input type="button" class="size" value="やり直す" onclick="window.location.reload();" />
+
+
+ <script type="text/javascript">
+
+ //問題と解答
+ qa = new Array();
+ qa[0]=['This tablet has a (評判) for being user-friendly.','reputation','evaluate','sarch',1];
+   qa[1]=['(繋ぐ) the dots.','Connect','Set','Put',1];
+   qa[2]=['(加える) sugar','Add','plus','odd',1];
+   qa[3]=['An operating room is filled with medical (装置).','devices','box','phone',1];
+   qa[4]=['Have (利用) to the computer.','access','use','study',1];
+   qa[5]=['The internet is (アクセスできる) to all students.','accessible','access','accident',1];
+   qa[6]=['The product has’t been (発送する) yet.','shipped','transport','import',1];
+   qa[7]=['The (機能) of the stomach.','function','idea','further',1];
+   qa[8]=['Have a good (記憶力).','memory','idea','fouse',1];
+   qa[9]=['(人工の) snow.','Artificial','population','auto',1];
+   qa[10]=['Artificial (知能).','intelligence','interest','idea',1];
+   qa[11]=['LINE is prime (手段) of communication among them.','medium','way','method',1];
+   qa[12]=['(googleで検索する) the word.','Google','gogole','gooog',1];
+   qa[13]=['Turn off one’s (携帯電話).','cell phone','phone','iphone',1];
+   qa[14]=['It is dangerous to use a (スマートフォン) while you are walking.','smartphone','phone','iphone',1];
+   qa[15]=['Have you installed this (アプリ) yet?','app','apri','apuri',1];
+   qa[16]=['.I came to know him through (ソーシャルメディア).','social media','social studies','society',1];
+   qa[17]=['.SNS stand for (ソーシャルネットワークサービス).','social networking service','net','internet',1];
+   qa[18]=['No (入ること).','entry','enter','in',1];
+   qa[19]=['Stop (ツイートする) so often.','tweeting','tui-to','twicas',1];
+   qa[20]=['Not all girls like (インスタグラム).','instagram','insta','include',1];
+   qa[21]=['This boat is equipped with (GPS).','GPS','','',1];
+   qa[22]=['I (文字を打った) this report on my computer.','typed','inputed','puted',1];
+   qa[23]=['(ネットサーフィンする) the internet.','Surf','staff','smart',1];
+   qa[24]=['(ふさぐ) their access to my SNS.','Block','cancel','hack',1];
+   qa[25]=['Looking at a computer (画面) for a long time will damage your eyes.','screen','display','game',1];
+   qa[26]=['It is easy to change the (レイアウト) of the icons on the screen.','layout','lay','out',1];
+   qa[27]=['Meet people (オンライン上で).','online','on','line',1];
+   qa[28]=['You can use this app (オフラインで).','offline','off','line',1];
+   qa[29]=['The (有害な) effects of smartphones on children.','harmful','pollution','danger',1];
+   qa[30]=['Due to the (影響) of SNS.','influence','effort','effect',1];
+   qa[31]=['She didn’t give an (即座の) reply to my email.','immediate','soon','quick',1];
+   qa[32]=['A (無線の) mouse.','wireless','','',1];
+   qa[33]=['(無人自動車) are expected to reduce traffic accident and traffic jams.','Fearless car','Driverless cars','Catless car',2];
+   qa[34]=['Factory (自動化).','','automation','',2];
+   qa[35]=['Making a (アヒル口) was popular among japanese girls a few years ago.','face ID','duck face','cat face',2];
+   qa[36]=['Stop living in a dream and look at the (現実の) world.','recent','real','clear',2];
+   qa[37]=['The (普通の) price.','basic','normal','premium',2];
+   qa[38]=['Have an (異常な) interest in video games.','innormal','abnormal','unnormal',2];
+   qa[39]=['He won a (巨大な) sum of money in a lottery.','big','huge','large',2];
+   qa[40]=['A (とても小さな) amount of money.','small','tiny','short',2];
+   qa[41]=['It is (明らかな) to everybody taht he is right.','light','obvious','bright',2];
+   qa[42]=['We were caught in a (急な) shower.','soon','sudden','fast',2];
+   qa[43]=['Your doughter is making a (急速な) recovery.','first','rapid','late',2];
+   qa[44]=['.You must drive with (極端な) caution when you pass by an elementary school.','special','extreme','super',2];
+   qa[45]=['Workers with broad (一般的な) knowledge.','basic','general','normal',2];
+   qa[46]=['.He spoke in (詳細).','constract','detail','descript',2];
+   qa[47]=['A (堅い) friendship.','real','firm','fire',2];
+   qa[48]=['I have (鮮やかな) memories of my childhood.','clear','vivid','clever',2];
+   qa[49]=['Her (絶え間ない) efforts helped her become a famous dancer.','last','constant','nonstop',2];
+   qa[50]=['A large (量) of money.','','amount','quantity',2];
+   qa[51]=['Cut the pizza into (四分の一).','forth','quarters','twice',2];
+   qa[52]=['In the last two (十年).','decide','decades','ten',2];
+   qa[53]=['On a weekly (基礎).','base','basis','normal',2];
+   qa[54]=['A (一組) of times per week.','one','once','couple',3];
+   qa[55]=['The (広大な) majority of students.','big','bord','vast',3];
+   qa[56]=['A love (三角形).','sin','cos','triangle',3];
+   qa[57]=['That style is out of (流行) now.','recent','recently','fashion',3];
+   qa[58]=['The prime minister’s speech will be (放送される) on NHK this evening.','broadcast','life','aired',3];
+   qa[59]=['The child did not pay (注意) to the traffic light.','care','take','attention',3];
+   qa[60]=['Bear (成果).','france','fuel','fruit',3];
+   qa[61]=['He was so tired that he was (しっかりと) asleep.','good','well','fast',3];
+   qa[62]=['She has a (才能) for music.','present','power','gift',3];
+   qa[63]=['She ia (ただ～だけ) a child.','not','at','just',3];
+   qa[64]=['There seems to be no (生命) on the planet.','live','light','life',3];
+   qa[65]=['Respect the cultures of other (国民).','countries','liver','peoples',3];
+   qa[66]=['(置く) emphasis on teamwork.','put','take','Place',3];
+   qa[67]=['.It is rude to (指さす) at a person.','access','accident','point',3];
+   qa[68]=['Our project is now in the final (段階).','level','space','stage',3];
+   qa[69]=['There’s no (余地) for argument.','expect','idea','room',3];
+   qa[70]=['A three-(階) building.','space','light','story',3];
+   qa[71]=['You need to be(我慢強い) with children.','high','powerful',' patient',3];
+   qa[72]=['Honesty does not (割に合う).','Mac','eleven','pay',3];
+   qa[73]=['In ancient (時代).','tower','trip','times',3];
+   qa[74]=['My friend patted me on the (背中).','behind','brother','back',3];
+   qa[75]=['Twitter came into (存在) in 2006.','appear','along','being',3];
+   qa[76]=['He (壊した) his leg in a soccer game.','make','extra','broke',3];
+   qa[77]=['A fallen rock (ふさいでいた) the path.','stop','incorrect','barred',3];
+   qa[78]=['That is not the (真実).','truth','beliave','case',3];
+   qa[79]=['I don’t know the (内容) of the report.','constract','certain','content',3];
+   qa[80]=['The (目的) justifies the means.','principle','per','end',3];
+   qa[81]=['It’s not (公正な)!','public','OK','fair',3];
+   qa[82]=['Push the project (前に).','back','center','forward',3];
+   qa[83]=['Hide-and-seek is a popular Children’s (遊び).','ASOBO','play','game',3];
+   qa[84]=['He didn’t tell me the (秘訣) to his success.','spice','seacret','key',3];
+   qa[85]=['The rain (続いた) for a week.','larger','manmade','lasted',3];
+   qa[86]=['act on (理性).','happy','thinking','reason',3];
+   qa[87]=['Take a (休憩)','break','morning','rest',3];
+   qa[88]=['The (魂) of man.','hart','heart','soul',3];
+   qa[89]=['A hot (泉).','flower','fuel','spring',3];
+   qa[90]=['Unlike the grasshoppers, the ants (蓄えた) food for the winter.','rest','stop','stored',3];
+   qa[91]=['He (飲み込む) the pills with water.','warter','drink','swallowed',3];
+   qa[92]=['This project (満たす) the demands of busy business people.','spill','fill','meets',3];
+   qa[93]=['Human (本質).','real','unreal','nature',3];
+   qa[94]=['It was (当然だ) for him to lose.','correct','right','natural',3];
+   qa[95]=['He took (メモ) of her speech.','memo','paper','notes',3];
+   qa[96]=['.It’s (奇妙な) that she is late.','misrery','afraid','odd',3];
+   qa[97]=['A (連続) of unlucky events.','rapid','twice','train',3];
+   qa[98]=['Break one’s (約束).','prenet','idea','word',3];
+   qa[99]=['Can you (渡す) the note to me?','pass','throught','hand',3];
+ 
+  
+
+
+
+  
+  
+ function run(){
+ for (var i = qa.length-1; i>=0; i--){
+  var rand = Math.floor(Math.random() * (i+1));
+  var temp = qa[i];
+  qa[i] = qa[rand]
+  qa[rand] = temp;
+  document.getElementById("001").innerHTML = i + "回目= " + qa;
+  quiz(qa);
+ }
+  }
+
+
+ q_sel = 3; 
+ setReady(qa);
+
+function setReady() {
+ count = 0; 
+ ansers = new Array(); 
+ run();
+ quiz(); 
+ }
+function quiz() { 
+  var s, n;
+  
+ document.getElementById("text_q").innerHTML = (count + 1) + "." + qa[count][0];
+  
+ s = "";
+   for (n=1;n<=q_sel;n++) {
+    s += "<a href='javascript:anser(" + n + ")'>" + n + "." + qa[count][n] + "</a>";
+   }
+ document.getElementById("text_s").innerHTML = s;
+ }
+function anser(num) { 
+  var s;
+  s = (count + 1) + ".";
+  
+ if (num == qa[count][q_sel + 1]) {
+   
+  ansers[count] = "○";
+  } else {
+   ansers[count] = "×";
+  }
+  s += ansers[count] + qa[count][num];
+  document.getElementById("text_a").innerHTML = s;
+  
+ count++;
+  if (count < qa.length) {
+   quiz();
+  } else {
+   
+  s = "<table class='raw' border='2'><caption>成績発表</caption>";
+   
+  s += "<tr><th>問題</th>";
+   for (n=0;n<qa.length;n++) {
+    s += "<th>" + (n+1) + "</th>";
+   }
+   s += "</tr>";
+   
+  s += "<tr><th>成績</th>";
+   for (n=0;n<qa.length;n++) {
+    s += "<td>" + ansers[n] + "</td>";
+   }
+   s += "</tr>";
+   s += "</table>";
+   document.getElementById("text_q").innerHTML = s;
+   
+  s = "<a href='javascript:history.back()'>戻る</a>";
+   s += "<a href='javascript:setReady()'>やり直す</a>";
+   document.getElementById("text_s").innerHTML = s;
+  }
+ }
+ </script>
+ </body>
+ </html>]
+
+ 
