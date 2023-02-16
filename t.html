@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>四択クイズ</title>
+</head>
+<body>
+	<h1>四択クイズ</h1>
+	<p id="question"></p>
+	<form>
+		<input type="radio" name="answer" id="choice1">
+		<label for="choice1" id="label1"></label><br>
+		<input type="radio" name="answer" id="choice2">
+		<label for="choice2" id="label2"></label><br>
+		<input type="radio" name="answer" id="choice3">
+		<label for="choice3" id="label3"></label><br>
+		<input type="radio" name="answer" id="choice4">
+		<label for="choice4" id="label4"></label><br><br>
+		<button type="button" onclick="checkAnswer()">回答する</button>
+	</form>
+
+	<p id="result"></p>
+
+	<script>
+		var currentQuestion = 0;
+		var score = 0;
+
+		var questions = [
+			{
+				question: "日本の首都はどこ？",
+				choices: ["東京", "大阪", "名古屋", "札幌"],
+				correctAnswer: 0
+			},
+			{
+				question: "HTMLは何の略？",
+				choices: ["Hyper Text Markup Language", "High Tech Media Language", "Hot Temperature Mainframe Language", "Happy Turtles Making Lasagna"],
+				correctAnswer: 0
+			},
+			{
+				question: "JavaScriptで変数を宣言するキーワードは？",
+				choices: ["var", "let", "const", "both a and b"],
+				correctAnswer: 3
+			}
+		];
+
+		function loadQuestion() {
+			var q = questions[currentQuestion];
+			document.getElementById("question").innerHTML = q.question;
+			document.getElementById("label1").innerHTML = q.choices[0];
+			document.getElementById("label2").innerHTML = q.choices[1];
+			document.getElementById("label3").innerHTML = q.choices[2];
+			document.getElementById("label4").innerHTML = q.choices[3];
+		}
+
+		function checkAnswer() {
+			var userAnswer = -1;
+			var choices = document.getElementsByName("answer");
+			for (var i = 0; i < choices.length; i++) {
+				if (choices[i].checked) {
+					userAnswer = i;
+				}
+			}
+			if (userAnswer == -1) {
+				alert("回答を選択してください。");
+				return;
+			}
+			if (userAnswer == questions[currentQuestion].correctAnswer) {
+				score++;
+				document.getElementById("result").innerHTML = "正解！";
+			} else {
+				document.getElementById("result").innerHTML = "不正解。";
+			}
+			currentQuestion++;
+			if (currentQuestion < questions.length) {
+				loadQuestion();
+			} else {
+				document.getElementById("question").innerHTML = "クイズ終了！
